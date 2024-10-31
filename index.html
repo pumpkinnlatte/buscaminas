@@ -4,38 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buscaminas</title>
+  <link rel="icon" type="image/x-icon" href="resources/mina.png">
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <h1>Juego de Buscaminas</h1>
 
-  <div id="configuracion">
-    <label for="dificultad">Dificultad:</label>
-    <select id="dificultad" onchange="seleccionarDificultad()">
-      <option value="facil">Fácil</option>
-      <option value="medio">Medio</option>
-      <option value="dificil">Difícil</option>
-      <option value="muy_dificil">Muy Difícil</option>
-      <option value="hardcore">Hardcore</option>
-      <option value="leyenda">Leyenda</option>
-      <option value="personalizado">Personalizado</option>
-    </select>
+  <div id="page-content">
+    <h1>Juego de Buscaminas</h1>
 
-    <div id="inputs-personalizados" style="display: none;">
-      <label for="filas">Filas:</label>
-      <input type="number" id="filas" min="5" max="30" value="10">
-      <label for="columnas">Columnas:</label>
-      <input type="number" id="columnas" min="5" max="30" value="10">
-      <label for="minas">Minas:</label>
-      <input type="number" id="minas" min="1" max="100" value="15">
+    <div id="configuracion">
+      <label for="dificultad">Dificultad:</label>
+      <select id="dificultad" onchange="seleccionarDificultad()">
+        <option value="facil">Fácil</option>
+        <option value="medio">Medio</option>
+        <option value="dificil">Difícil</option>
+        <option value="muy_dificil">Muy Difícil</option>
+        <option value="hardcore">Hardcore</option>
+        <option value="leyenda">Leyenda</option>
+        <option value="personalizado">Personalizado</option>
+      </select>
+
+      <div id="inputs-personalizados" style="display: none;">
+        <label for="filas">Filas:</label>
+        <input type="number" id="filas" min="5" max="30" value="8">
+        <label for="columnas">Columnas:</label>
+        <input type="number" id="columnas" min="5" max="30" value="8">
+        <label for="minas">Minas:</label>
+        <input type="number" id="minas" min="1" max="100" value="10">
+      </div>
+    
+      <button onclick="iniciarJuego()">Iniciar Juego</button>
     </div>
-  
-    <button onclick="iniciarJuego()">Iniciar Juego</button>
+
+    <div id="tablero" style="display: none;"></div>
+
+    <section id="descripcion">
+      <p>El objetivo del juego de Buscaminas es despejar un campo de minas sin detonarlas. Al hacer clic en una celda, revelas lo que hay en ella: un número que indica la cantidad de minas en las celdas adyacentes o una mina que termina el juego si la activas. Usa el análisis y la lógica para evitar las minas y despejar todas las celdas seguras.</p>
+      
+      <h2>Niveles de Dificultad</h2>
+      <ul>
+        <li><strong>Fácil:</strong> Tablero de 8x8 con 10 minas. Ideal para principiantes.</li>
+        <li><strong>Medio:</strong> Tablero de 12x12 con 24 minas. Para jugadores con algo de experiencia.</li>
+        <li><strong>Difícil:</strong> Tablero de 16x16 con 40 minas. Un reto considerable.</li>
+        <li><strong>Muy Difícil:</strong> Tablero de 20x20 con 60 minas. Requiere alta concentración.</li>
+        <li><strong>Hardcore:</strong> Tablero de 24x24 con 99 minas. Solo para jugadores avanzados.</li>
+        <li><strong>Leyenda:</strong> Tablero de 30x30 con 150 minas. Un desafío épico.</li>
+        <li><strong>Personalizado:</strong> Ajusta el tamaño del tablero y la cantidad de minas a tu preferencia.</li>
+      </ul>
+    </section>
   </div>
-
-  <div id="tablero" style="display: none;"></div>
-
-  <button id="btn-mostr">Mostrar estado</button>
 
   <script src="script.js"></script>
 </body>
