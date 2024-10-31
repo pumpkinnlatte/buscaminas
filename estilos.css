@@ -1,0 +1,182 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+#configuracion {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-size: 1em;
+  margin-right: 5px;
+  color: #34495e;
+}
+
+input, button {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#tablero {
+  display: grid;
+  margin: 2px auto;
+  border-radius: 8px;
+}
+
+.celda {
+  width: 32px;
+  height: 32px;
+  background-image: url(resources/celda.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 16px;
+  text-align: center;
+  line-height: 32px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+  
+  .celda.mina {
+    background-image: url(resources/mina.png);
+
+  }
+
+  .celda.bandera {
+    background-image: url(resources/bandera.png);
+  }
+
+  .celda.bandera.error{
+    background-image: url(resources/bandera-error.png);
+  }
+
+  
+  .celda.revelada {
+    background-image: url(resources/celda-rev.png);
+    cursor: default;
+  }
+  
+  .celda.revelada.mina {
+
+    background-image: url(resources/mina-pisada.png);
+
+  }
+ 
+  .celda.revelada.uno{
+    background-image: url(resources/001.png);
+
+  }
+
+  .celda.revelada.dos{
+    background-image: url(resources/002.png);
+  }
+
+  .celda.revelada.tres{
+    background-image: url(resources/003.png);
+  }
+
+  .celda.revelada.cuatro{
+    background-image: url(resources/004.png); 
+  }
+
+  .celda.revelada.cinco{
+    background-image: url(resources/005.png);
+  }
+
+  .celda.revelada.seis{
+    background-image: url(resources/006.png);
+  }
+
+  .celda.revelada.siete{
+    background-image: url(resources/007.png);
+  }
+
+  .celda.revelada.ocho{
+    background-image: url(resources/008.png);
+  }
+
+
+  .top-left{
+    background-image: url(resources/top-left.png);
+    background-repeat: no-repeat;
+  }
+
+  .top{
+    background-image: url(resources/top.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  .top-right{
+    background-image: url(resources/top-right.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  
+
+  .left{
+    background-image: url(resources/left.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  .right{
+    background-image: url(resources/right.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  .bottom-left{
+    background-image: url(resources/bottom-left.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  .bottom{
+    background-image: url(resources/bottom.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  .bottom-right{
+    background-image: url(resources/bottom-right.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
