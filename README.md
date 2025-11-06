@@ -61,5 +61,4 @@ License
 Author
 - pumpkinnlatte
 
-Enjoy the game — happy sweeping!
-````
+Enjoy the game!
