@@ -26,9 +26,6 @@ Controls
   - New Game / Reset: start a new board.
   - Difficulty: choose preset difficulty or custom size/mines.
 
-Screenshots
-(Replace the placeholders below with real images from the `assets/` folder if you add them.)
-
 - Game board (start)
 ![Screenshot - Start](assets/screenshot-start.png)
 
